@@ -16,6 +16,11 @@ It is not just about nuxt and bulma. You can start with **adaptive layout**, som
 * DiagonalSectionDivider (TODO) : left-top-to-right-bottom, right-top-to-left-bottom
 * SponsorSection (TODO)
 * TeamMemberSection (TODO)
+* HistorySection (TODO)
+* PortfolioSection (TODO)
+* JumboSection (TODO)
+* ContactSection (TODO)
+* ReveiwSection (TODO)
 
 
 ## Embedded plugins
