@@ -1,5 +1,10 @@
 <template>
   <section class="section">
+    <jumboSection
+      title="선도적인 기술과<br>데이터를 통한 유의미한 가치 창출"
+      image-height="10"
+      image-url="jumbo.jpeg"
+    />
     <div class="columns is-mobile">
       <card title="Free" icon="github-circle">
         Open source on <a href="https://github.com/buefy/buefy"> GitHub</a>
@@ -23,12 +28,14 @@
 
 <script>
 import Card from '~/components/Card'
+import JumboSection from '~/components/JumboSection'
 
 export default {
   name: 'HomePage',
 
   components: {
-    Card
+    Card,
+    JumboSection
   }
 }
 </script>
