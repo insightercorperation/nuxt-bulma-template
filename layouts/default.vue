@@ -8,7 +8,7 @@
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item" href="/">
-            <img src="~assets/buefy.png" alt="Buefy" height="28" />
+            <img src="~assets/img/logo/buefy.png" alt="Buefy" height="28" />
           </a>
 
           <div
@@ -76,6 +76,11 @@ export default {
           title: 'Inspire',
           icon: 'lightbulb',
           to: { name: 'inspire' }
+        },
+        {
+          title: 'Showcase',
+          icon: 'lightbulb',
+          to: { name: 'showcase' }
         }
       ]
     }
