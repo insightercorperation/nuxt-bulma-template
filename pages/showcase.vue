@@ -23,12 +23,12 @@ export default {
         title: '스폰서',
         // Image path should be relative to assests
         sponsorImages: [
-          'vpsserver.png',
-          'hebergeurweb.png',
-          'tooltwist.png',
-          'vpsserver.png',
-          'hebergeurweb.png',
-          'tooltwist.png'
+          'img/logo/vpsserver.png',
+          'img/logo/hebergeurweb.png',
+          'img/logo/tooltwist.png',
+          'img/logo/vpsserver.png',
+          'img/logo/hebergeurweb.png',
+          'img/logo/tooltwist.png'
         ]
       }
     }

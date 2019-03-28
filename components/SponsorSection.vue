@@ -35,7 +35,7 @@ export default {
     return {
       resolvedImages: this.images.map(image => {
         return {
-          url: require(`../assets/${image}`),
+          url: require(`~/assets/${image}`),
           name: image.split('.')[0]
         }
       })
