@@ -1,36 +1,26 @@
 <template>
-  <section class="section">
-    <div v-if="imagePosition == 'right'" class="columns is-vcentered">
-      <div class="column">
-        <h1 class="ins-desc-title">{{ title }}</h1>
-        <h2
-          v-for="text in splitSemicolon"
-          :key="text"
-          class="ins-desc-subtitle"
-        >
-          {{ text }}
-        </h2>
-        <slot />
+  <section class="hero is-medium">
+    <div class="hero-body">
+      <div v-if="imagePosition == 'right'" class="columns is-vcentered">
+        <div class="column is-5">
+          <h1 class="ins-desc-title">{{ title }}</h1>
+          <h2 class="ins-desc-subtitle" v-html="subtitle"></h2>
+          <slot />
+        </div>
+        <div class="column is-7">
+          <img class="ns-image-left" :src="resolvedImageUrl" :alt="imageDesc" />
+        </div>
       </div>
-      <div class="column">
-        <img :src="resolvedImageUrl" :alt="imageDesc" />
-      </div>
-    </div>
-    <div v-else class="columns is-vcentered">
-      <div class="column">
-        <img :src="resolvedImageUrl" :alt="imageDesc" />
-      </div>
-      <div class="column is-2" />
-      <div class="column">
-        <h1 class="ins-desc-title">{{ title }}</h1>
-        <h2
-          v-for="text in splitSemicolon"
-          :key="text"
-          class="ins-desc-subtitle"
-        >
-          {{ text }}
-        </h2>
-        <slot />
+      <div v-else class="columns is-vcentered">
+        <div class="column is-5 top">
+          <h1 class="ins-desc-title">{{ title }}</h1>
+          <h2 class="ins-desc-subtitle" v-html="subtitle"></h2>
+          <slot />
+        </div>
+        <div class="column is-2" style="order: 2;" />
+        <div class="column is-7 bottom">
+          <img class="ns-image-left" :src="resolvedImageUrl" :alt="imageDesc" />
+        </div>
       </div>
     </div>
   </section>
@@ -77,7 +67,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .ins-desc-title {
   font-size: 2rem;
   font-weight: 900;
@@ -85,5 +75,20 @@ export default {
 .ins-desc-subtitle {
   font-size: 1.2rem;
   font-weight: bold;
+}
+.top {
+  order: 1;
+}
+.bottom {
+  order: 3;
+}
+
+@media screen and (min-width: 769px), print {
+  .top {
+    order: 3;
+  }
+  .bottom {
+    order: 1;
+  }
 }
 </style>
