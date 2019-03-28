@@ -10,7 +10,9 @@
       :key="sample.title"
       :title="sample.title"
       :subtitle="sample.subtitle"
-      :image="sample.image"
+      :image="sample.image.path"
+      :image-desc="sample.image.desc"
+      :image-position="sample.image.position"
     >
       <!-- Add slot in Desc Section -->
       <div style="padding-left: 0;">
@@ -65,7 +67,7 @@ export default {
           image: {
             path: 'img/desc-section-test-1.png',
             desc: '빅데이터 활용 이미지',
-            location: 'right'
+            position: 'right'
           }
         },
         {
@@ -75,7 +77,7 @@ export default {
           image: {
             path: 'img/desc-section-test-2.png',
             desc: '에듀테크용 이미지',
-            location: 'left'
+            position: 'left'
           }
         }
       ]

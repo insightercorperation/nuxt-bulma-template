@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <div v-if="image.location == 'right'" class="columns is-vcentered">
+    <div v-if="imagePosition == 'right'" class="columns is-vcentered">
       <div class="column">
         <h1 class="ins-desc-title">{{ title }}</h1>
         <h2
@@ -13,12 +13,12 @@
         <slot />
       </div>
       <div class="column">
-        <img :src="require(`@/assets/${image.path}`)" :alt="image.desc" />
+        <img :src="resolvedImageUrl" :alt="imageDesc" />
       </div>
     </div>
     <div v-else class="columns is-vcentered">
       <div class="column">
-        <img :src="require(`@/assets/${image.path}`)" :alt="image.desc" />
+        <img :src="resolvedImageUrl" :alt="imageDesc" />
       </div>
       <div class="column is-2" />
       <div class="column">
@@ -48,20 +48,21 @@ export default {
       required: true
     },
     image: {
-      path: {
-        type: String,
-        required: true
-      },
-      desc: {
-        type: String,
-        required: true
-      },
-      location: {
-        type: String,
-        required: true
-      },
-      type: Object,
+      type: String,
       required: true
+    },
+    imageDesc: {
+      type: String,
+      required: true
+    },
+    imagePosition: {
+      type: String,
+      required: true
+    }
+  },
+  data() {
+    return {
+      resolvedImageUrl: require(`../assets/${this.image}`)
     }
   },
   computed: {
