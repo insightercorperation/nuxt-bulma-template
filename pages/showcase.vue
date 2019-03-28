@@ -5,16 +5,22 @@
       :title="sponsorSection.title"
       :images="sponsorSection.sponsorImages"
     />
+    <jumboSection
+      title="선도적인 기술과<br>데이터를 통한 유의미한 가치 창출"
+      image-url="jumbo"
+    />
   </div>
 </template>
 
 <script>
 import SponsorSection from '~/components/SponsorSection.vue'
+import JumboSection from '~/components/JumboSection.vue'
 
 export default {
   name: 'Showcase',
   components: {
-    SponsorSection
+    SponsorSection,
+    JumboSection
   },
   data() {
     // Add Sample data under your own namespaces

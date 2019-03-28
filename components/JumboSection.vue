@@ -1,5 +1,5 @@
 <template>
-  <section class="hero is-medium">
+  <section class="hero is-large">
     <div class="hero-body" :style="{ backgroundImage: 'url(' + image + ')' }">
       <div class="container">
         <h1 class="title" v-html="title">
@@ -41,17 +41,14 @@ export default {
   },
   data: function() {
     return {
-      image: require('../assets/' + this.imageUrl)
+      image: require('../assets/' + this.imageUrl + '.jpeg')
       // paddingTop: this.imageHeight / 2
     }
   }
 }
 </script>
 
-<style>
-.hero {
-  background-color: black;
-}
+<style scoped>
 .title {
   color: white;
   padding-left: 5rem;
