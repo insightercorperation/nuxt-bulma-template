@@ -1,31 +1,35 @@
 <template>
   <section class="section">
-    <div v-if="imageLocation == 1" class="columns is-vcentered">
+    <div v-if="image.location == 'right'" class="columns is-vcentered">
       <div class="column">
-        <h1 class="ins-title">{{ title }}</h1>
-        <div v-if="subtitle">
-          <h2 v-for="text in splitComma" :key="text" class="ins-subtitle">
-            {{ text }}
-          </h2>
-        </div>
+        <h1 class="ins-desc-title">{{ title }}</h1>
+        <h2
+          v-for="text in splitSemicolon"
+          :key="text"
+          class="ins-desc-subtitle"
+        >
+          {{ text }}
+        </h2>
         <slot />
       </div>
       <div class="column">
-        <img :src="require(`@/assets/${image}`)" :alt="imageDesc" />
+        <img :src="require(`@/assets/${image.path}`)" :alt="image.desc" />
       </div>
     </div>
     <div v-else class="columns is-vcentered">
       <div class="column">
-        <img :src="require(`@/assets/${image}`)" :alt="imageDesc" />
+        <img :src="require(`@/assets/${image.path}`)" :alt="image.desc" />
       </div>
       <div class="column is-2" />
       <div class="column">
-        <h1 class="ins-title">{{ title }}</h1>
-        <div v-if="subtitle">
-          <h2 v-for="text in splitComma" :key="text" class="ins-subtitle">
-            {{ text }}
-          </h2>
-        </div>
+        <h1 class="ins-desc-title">{{ title }}</h1>
+        <h2
+          v-for="text in splitSemicolon"
+          :key="text"
+          class="ins-desc-subtitle"
+        >
+          {{ text }}
+        </h2>
         <slot />
       </div>
     </div>
@@ -44,20 +48,24 @@ export default {
       required: true
     },
     image: {
-      type: String,
-      required: true
-    },
-    imageDesc: {
-      type: String,
-      required: true
-    },
-    imageLocation: {
-      type: String, // 0: 왼쪽, 1: 오른쪽
+      path: {
+        type: String,
+        required: true
+      },
+      desc: {
+        type: String,
+        required: true
+      },
+      location: {
+        type: String,
+        required: true
+      },
+      type: Object,
       required: true
     }
   },
   computed: {
-    splitComma() {
+    splitSemicolon() {
       if (this.subtitle) {
         return this.subtitle.split(';')
       } else {
@@ -69,11 +77,11 @@ export default {
 </script>
 
 <style>
-.ins-title {
+.ins-desc-title {
   font-size: 2rem;
   font-weight: 900;
 }
-.ins-subtitle {
+.ins-desc-subtitle {
   font-size: 1.2rem;
   font-weight: bold;
 }
