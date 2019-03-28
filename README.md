@@ -2,7 +2,7 @@
 Start your stunning **SPA** (single page webapplication) right now with nuxt and bulma (feat.buefy)!
 
 ## What's the diffrence?
-It is not just about nuxt and bulma. You can start with **adaptive layout**, some useful **components** and **plugins** that would be used in most website senarios.
+It is not just about nuxt and bulma. You can start with **adaptive layout**, some useful **components** and **plugins** that would be used in most webapp senarios.
 
 
 ## Apdative Layout
