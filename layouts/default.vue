@@ -81,6 +81,11 @@ export default {
           title: 'Showcase',
           icon: 'lightbulb',
           to: { name: 'showcase' }
+        },
+        {
+          title: 'Desc',
+          icon: 'lightbulb',
+          to: { name: 'desc' }
         }
       ]
     }
