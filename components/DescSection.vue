@@ -8,7 +8,7 @@
           <slot />
         </div>
         <div class="column is-7">
-          <img class="ns-image-left" :src="resolvedImageUrl" :alt="imageDesc" />
+          <img :src="resolvedImageUrl" :alt="imageDesc" />
         </div>
       </div>
       <div v-else class="columns is-vcentered">
@@ -19,7 +19,7 @@
         </div>
         <div class="column is-2" style="order: 2;" />
         <div class="column is-7 bottom">
-          <img class="ns-image-left" :src="resolvedImageUrl" :alt="imageDesc" />
+          <img :src="resolvedImageUrl" :alt="imageDesc" />
         </div>
       </div>
     </div>
