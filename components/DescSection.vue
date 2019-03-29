@@ -4,7 +4,18 @@
       <div v-if="imagePosition == 'right'" class="columns is-vcentered">
         <div class="column is-5">
           <h1 class="ins-desc-title">{{ title }}</h1>
-          <h2 class="ins-desc-subtitle" v-html="subtitle"></h2>
+          <div v-if="splitSubtitleBy">
+            <h2
+              v-for="text in splittedSubtitle"
+              :key="text"
+              class="ins-desc-subtitle"
+            >
+              {{ text }}
+            </h2>
+          </div>
+          <div v-else>
+            <h2 class="ins-desc-subtitle">{{ subtitle }}</h2>
+          </div>
           <slot />
         </div>
         <div class="column is-7">
@@ -14,7 +25,18 @@
       <div v-else class="columns is-vcentered">
         <div class="column is-5 top">
           <h1 class="ins-desc-title">{{ title }}</h1>
-          <h2 class="ins-desc-subtitle" v-html="subtitle"></h2>
+          <div v-if="splitSubtitleBy">
+            <h2
+              v-for="text in splittedSubtitle"
+              :key="text"
+              class="ins-desc-subtitle"
+            >
+              {{ text }}
+            </h2>
+          </div>
+          <div v-else>
+            <h2 class="ins-desc-subtitle">{{ subtitle }}</h2>
+          </div>
           <slot />
         </div>
         <div class="column is-2" style="order: 2;" />
@@ -37,6 +59,10 @@ export default {
       type: String,
       required: true
     },
+    splitSubtitleBy: {
+      type: String,
+      required: true
+    },
     image: {
       type: String,
       required: true
@@ -56,9 +82,9 @@ export default {
     }
   },
   computed: {
-    splitSemicolon() {
-      if (this.subtitle) {
-        return this.subtitle.split(';')
+    splittedSubtitle() {
+      if (this.splitSubtitleBy) {
+        return this.subtitle.split(this.splitSubtitleBy)
       } else {
         return ''
       }
