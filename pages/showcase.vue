@@ -9,7 +9,8 @@
       v-for="sample in descSection"
       :key="sample.title"
       :title="sample.title"
-      :subtitle="sample.subtitle"
+      :subtitle="sample.subtitle.text"
+      :split-subtitle-by="sample.subtitle.splitBy"
       :image="sample.image.path"
       :image-desc="sample.image.desc"
       :image-position="sample.image.position"
@@ -63,7 +64,10 @@ export default {
       descSection: [
         {
           title: '빅데이터 활용 컨설팅',
-          subtitle: '',
+          subtitle: {
+            text: 'split-by-semicolon; comma, semicolon; end',
+            splitBy: ';'
+          },
           image: {
             path: 'img/desc-section-test-1.png',
             desc: '빅데이터 활용 이미지',
@@ -72,8 +76,10 @@ export default {
         },
         {
           title: '에듀테크',
-          subtitle:
-            '데이터와 분석기술을 활용하여<br>사용자 개인의 잠재력을<br>최대한 발휘할 수 있도록<br>최적화된 맞춤 학습을 제공합니다.',
+          subtitle: {
+            text: 'split-by-comma, comma, semicolon; end',
+            splitBy: ','
+          },
           image: {
             path: 'img/desc-section-test-2.png',
             desc: '에듀테크용 이미지',
