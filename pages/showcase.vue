@@ -6,8 +6,10 @@
       :images="sponsorSection.sponsorImages"
     />
     <jumboSection
-      title="선도적인 기술과<br>데이터를 통한 유의미한 가치 창출"
-      image-url="jumbo"
+      title="선도적인 기술과;데이터를 통한 유의미한 가치 창출"
+      image="jumbo.jpeg"
+      :full-height="false"
+      :split-subtitle-by="';'"
     />
   </div>
 </template>

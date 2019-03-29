@@ -1,25 +1,18 @@
 <template>
-  <section class="hero is-large">
-    <div class="hero-body" :style="{ backgroundImage: 'url(' + image + ')' }">
+  <section :class="classes">
+    <div class="hero-body" :style="{ backgroundImage: `url(${url})` }">
       <div class="container">
-        <h1 class="title" v-html="title">
-          {{ title }}
-        </h1>
+        <div v-if="splitSubtitleBy">
+          <h1
+            v-for="text in splittedSubtitle"
+            :key="text"
+            class="title ins-jumbo-title"
+          >
+            {{ text }}
+          </h1>
+        </div>
       </div>
     </div>
-    <!-- <div
-      class="centered"
-      :style="{
-        backgroundImage: 'url(' + image + ')',
-        height: imageHeight + 'px'
-      }"
-    >
-      <div
-        class="title"
-        :style="{ 'padding-top': paddingTop + 'px' }"
-        v-html="title"
-      ></div>
-    </div> -->
   </section>
 </template>
 
@@ -30,26 +23,41 @@ export default {
       type: String,
       required: true
     },
-    imageHeight: {
-      type: null,
+    image: {
+      type: String,
       required: true
     },
-    imageUrl: {
+    fullHeight: {
+      type: Boolean,
+      default: function() {
+        return false
+      }
+    },
+    splitSubtitleBy: {
       type: String,
       required: true
     }
   },
-  data: function() {
+  data() {
     return {
-      image: require('../assets/' + this.imageUrl + '.jpeg')
-      // paddingTop: this.imageHeight / 2
+      url: require(`../assets/${this.image}`),
+      classes: this.fullHeight ? 'hero is-fullheight' : 'hero is-large'
+    }
+  },
+  computed: {
+    splittedSubtitle() {
+      if (this.splitSubtitleBy) {
+        return this.title.split(this.splitSubtitleBy)
+      } else {
+        return ''
+      }
     }
   }
 }
 </script>
 
 <style scoped>
-.title {
+.ins-jumbo-title {
   color: white;
   padding-left: 5rem;
 }
