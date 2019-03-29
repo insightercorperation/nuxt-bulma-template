@@ -18,12 +18,12 @@
           </div>
           <slot />
         </div>
-        <div class="column is-7">
+        <div class="column is-6">
           <img :src="resolvedImageUrl" :alt="imageDesc" />
         </div>
       </div>
       <div v-else class="columns is-vcentered">
-        <div class="column is-5 top">
+        <div class="column is-5 is-offset-1 top">
           <h1 class="ins-desc-title">{{ title }}</h1>
           <div v-if="splitSubtitleBy">
             <h2
@@ -39,8 +39,7 @@
           </div>
           <slot />
         </div>
-        <div class="column is-2" style="order: 2;" />
-        <div class="column is-7 bottom">
+        <div class="column is-6 bottom">
           <img :src="resolvedImageUrl" :alt="imageDesc" />
         </div>
       </div>
