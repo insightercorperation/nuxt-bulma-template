@@ -34,6 +34,12 @@
       </div>
     </desc-section>
     <team-member-section :members="teamMemberSection" />
+    <contact-section
+      :map-src="contactSection.mapSrc"
+      :adress="contactSection.adress"
+      :phone="contactSection.phone"
+      :email="contactSection.email"
+    />
   </div>
 </template>
 
@@ -41,13 +47,15 @@
 import SponsorSection from '~/components/SponsorSection.vue'
 import DescSection from '~/components/DescSection'
 import TeamMemberSection from '~/components/TeamMemberSection'
+import ContactSection from '~/components/ContactSection.vue'
 
 export default {
   name: 'Showcase',
   components: {
     SponsorSection,
     DescSection,
-    TeamMemberSection
+    TeamMemberSection,
+    ContactSection
   },
   data() {
     // Add Sample data under your own namespaces
@@ -128,7 +136,14 @@ export default {
           image: 'img/teamMembers/maven.png',
           hoverImage: 'img/teamMembers/ari.jpg'
         }
-      ]
+      ],
+      contactSection: {
+        mapSrc:
+          'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.110768497124!2d126.88833755170758!3d37.57600927969696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c991346a0febd%3A0xa13d6751e4b0eec9!2zKOyjvCnsnbjsgqzsnbTthLA!5e0!3m2!1sko!2skr!4v1554083841549!5m2!1sko!2skr',
+        adress: '서울특별시 마포구 매봉산로 37 DMC 산학협력연구센터 601',
+        phone: '070-7548-9182',
+        email: 'contacts@ninestairs.co.kr'
+      }
     }
   }
 }
