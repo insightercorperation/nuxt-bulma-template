@@ -33,18 +33,26 @@
         </div>
       </div>
     </desc-section>
+    <history-section
+      :title="historySection.title"
+      :subtitle="historySection.subtitle"
+      :timeline-items="historySection.dataTimeline"
+      :message-when-no-items="historySection.messageWhenNoItems"
+    />
   </div>
 </template>
 
 <script>
 import SponsorSection from '~/components/SponsorSection.vue'
 import DescSection from '~/components/DescSection'
+import HistorySection from '~/components/HistorySection'
 
 export default {
   name: 'Showcase',
   components: {
     SponsorSection,
-    DescSection
+    DescSection,
+    HistorySection
   },
   data() {
     // Add Sample data under your own namespaces
@@ -86,7 +94,39 @@ export default {
             position: 'left'
           }
         }
-      ]
+      ],
+      historySection: {
+        title: '타임라인',
+        subtitle: '인사이터가 걸어온 길입니다.',
+        dataTimeline: [
+          {
+            from: new Date(2014, 11),
+            title: '2014.12 - 인사이터 설립 (개인사업자)'
+          },
+          {
+            from: new Date(2015, 1),
+            title: '2015.02 - 빅데이터 교육 사업 시작'
+          },
+          {
+            from: new Date(2015, 5),
+            title: '2015.06 - I-crawler 개발 완료'
+          },
+          {
+            from: new Date(2015, 8),
+            title: '2015.09 - Social Insighter 개발 완료'
+          },
+          {
+            from: new Date(2016, 1),
+            title: '2016.02 - (주)인사이터 설립',
+            description: '법인을 설립하였습니다.'
+          },
+          {
+            from: new Date(2016, 1),
+            title: '2016.02 - 팀원 모집'
+          }
+        ],
+        messageWhenNoItems: 'No articles found.'
+      }
     }
   }
 }
