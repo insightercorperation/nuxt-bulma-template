@@ -14,8 +14,8 @@
         <div class="column ins-text-column is-offset-1">
           <p class="ins-header ins-text-spacing">Contact Us</p>
           <div class="ins-text-spacing">
-            <h1 class="ins-title">Adress</h1>
-            <h2 class="ins-subtitle">{{ adress }}</h2>
+            <h1 class="ins-title">Address</h1>
+            <h2 class="ins-subtitle">{{ address }}</h2>
           </div>
           <div class="ins-text-spacing">
             <h1 class="ins-title">Phone</h1>
@@ -34,7 +34,7 @@
 <script>
 export default {
   props: {
-    adress: {
+    address: {
       type: String,
       required: true
     },
