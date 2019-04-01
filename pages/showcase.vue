@@ -158,28 +158,27 @@ export default {
         dataTimeline: [
           {
             from: new Date(2014, 11),
-            title: '2014.12 - 인사이터 설립 (개인사업자)'
+            title: '인사이터 설립 (개인사업자)'
           },
           {
             from: new Date(2015, 1),
-            title: '2015.02 - 빅데이터 교육 사업 시작'
+            title: '빅데이터 교육 사업 시작'
           },
           {
             from: new Date(2015, 5),
-            title: '2015.06 - I-crawler 개발 완료'
+            title: 'I-crawler 개발 완료'
           },
           {
             from: new Date(2015, 8),
-            title: '2015.09 - Social Insighter 개발 완료'
+            title: 'Social Insighter 개발 완료'
           },
           {
             from: new Date(2016, 1),
-            title: '2016.02 - (주)인사이터 설립',
-            description: '법인을 설립하였습니다.'
+            title: '(주)인사이터 설립'
           },
           {
             from: new Date(2016, 1),
-            title: '2016.02 - 팀원 모집'
+            title: '2팀원 모집'
           }
         ],
         messageWhenNoItems: 'No articles found.'
