@@ -4,7 +4,7 @@
     style="padding-left: 10px; padding-right: 10px;"
   >
     <div class="columns is-multiline is-variable is-8">
-      <teamMemberCard
+      <team-member-card
         v-for="member in members"
         :key="member.name"
         :name="member.name"
@@ -14,7 +14,7 @@
         :hover-image="member.hoverImage"
         class="column is-4 ins-card-element"
       >
-      </teamMemberCard>
+      </team-member-card>
     </div>
   </section>
 </template>
