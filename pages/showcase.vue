@@ -33,6 +33,7 @@
         </div>
       </div>
     </desc-section>
+    <team-member-section :members="teamMemberSection" />
     <contact-section
       :map-src="contactSection.mapSrc"
       :adress="contactSection.adress"
@@ -45,6 +46,7 @@
 <script>
 import SponsorSection from '~/components/SponsorSection.vue'
 import DescSection from '~/components/DescSection'
+import TeamMemberSection from '~/components/TeamMemberSection'
 import ContactSection from '~/components/ContactSection.vue'
 
 export default {
@@ -52,6 +54,7 @@ export default {
   components: {
     SponsorSection,
     DescSection,
+    TeamMemberSection,
     ContactSection
   },
   data() {
@@ -93,6 +96,45 @@ export default {
             desc: '에듀테크용 이미지',
             position: 'left'
           }
+        }
+      ],
+      teamMemberSection: [
+        {
+          name: 'Ari',
+          job: 'iOS Developer',
+          desc:
+            '모든 국민은 고문을 받지 아니하며, 형사상 자기에게 불리한 진술을 강요당하지 아니한다.',
+          image: 'img/teamMembers/ari.jpg',
+          hoverImage: 'img/teamMembers/alex.jpg'
+        },
+        {
+          name: 'Alex',
+          job: 'Developer',
+          desc: '안녕하세요. 알렉스입니다.',
+          image: 'img/teamMembers/alex.jpg',
+          hoverImage: 'img/teamMembers/ari.jpg'
+        },
+        {
+          name: 'John',
+          job: 'Developer',
+          desc:
+            '국가는 전통문화의 계승·발전과 민족문화의 창달에 노력하여야 한다. 민주평화통일자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다.',
+          image: 'img/teamMembers/ari.jpg',
+          hoverImage: 'img/teamMembers/ari.jpg'
+        },
+        {
+          name: 'Cindy',
+          job: 'Designer',
+          desc: '안녕하세요. Cindy입니다.',
+          image: 'img/teamMembers/cindy.png',
+          hoverImage: 'img/teamMembers/ari.jpg'
+        },
+        {
+          name: 'Maven',
+          job: 'Developer',
+          desc: '안녕하세요. Maven입니다.',
+          image: 'img/teamMembers/maven.png',
+          hoverImage: 'img/teamMembers/ari.jpg'
         }
       ],
       contactSection: {
