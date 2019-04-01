@@ -1,5 +1,8 @@
 <template>
-  <section class="hero-is-medium">
+  <section
+    class="hero-is-medium"
+    style="padding-left: 10px; padding-right: 10px;"
+  >
     <div class="columns is-multiline is-variable is-8">
       <teamMemberCard
         v-for="member in members"
@@ -34,7 +37,7 @@ export default {
 
 <style>
 .ins-card-element {
-  margin: 0 2rem 2rem 2rem;
+  margin: 0 0rem 2rem rem;
 }
 
 @media screen and (min-width: 769px), print {
