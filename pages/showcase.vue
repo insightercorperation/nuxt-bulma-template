@@ -40,14 +40,21 @@
       :phone="contactSection.phone"
       :email="contactSection.email"
     />
+    <history-section
+      :title="historySection.title"
+      :subtitle="historySection.subtitle"
+      :timeline-items="historySection.dataTimeline"
+      :message-when-no-items="historySection.messageWhenNoItems"
+    />
   </div>
 </template>
 
 <script>
 import SponsorSection from '~/components/SponsorSection.vue'
 import DescSection from '~/components/DescSection'
-import TeamMemberSection from '~/components/TeamMemberSection'
 import ContactSection from '~/components/ContactSection.vue'
+import HistorySection from '~/components/HistorySection'
+import TeamMemberSection from '~/components/TeamMemberSection'
 
 export default {
   name: 'Showcase',
@@ -55,7 +62,8 @@ export default {
     SponsorSection,
     DescSection,
     TeamMemberSection,
-    ContactSection
+    ContactSection,
+    HistorySection
   },
   data() {
     // Add Sample data under your own namespaces
@@ -143,6 +151,38 @@ export default {
         adress: '서울특별시 마포구 매봉산로 37 DMC 산학협력연구센터 601',
         phone: '070-7548-9182',
         email: 'contacts@ninestairs.co.kr'
+      },
+      historySection: {
+        title: '타임라인',
+        subtitle: '인사이터가 걸어온 길입니다.',
+        dataTimeline: [
+          {
+            from: new Date(2014, 11),
+            title: '2014.12 - 인사이터 설립 (개인사업자)'
+          },
+          {
+            from: new Date(2015, 1),
+            title: '2015.02 - 빅데이터 교육 사업 시작'
+          },
+          {
+            from: new Date(2015, 5),
+            title: '2015.06 - I-crawler 개발 완료'
+          },
+          {
+            from: new Date(2015, 8),
+            title: '2015.09 - Social Insighter 개발 완료'
+          },
+          {
+            from: new Date(2016, 1),
+            title: '2016.02 - (주)인사이터 설립',
+            description: '법인을 설립하였습니다.'
+          },
+          {
+            from: new Date(2016, 1),
+            title: '2016.02 - 팀원 모집'
+          }
+        ],
+        messageWhenNoItems: 'No articles found.'
       }
     }
   }
