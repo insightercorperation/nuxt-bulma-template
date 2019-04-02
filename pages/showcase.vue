@@ -36,7 +36,7 @@
     <team-member-section :members="teamMemberSection" />
     <contact-section
       :map-src="contactSection.mapSrc"
-      :adress="contactSection.adress"
+      :address="contactSection.address"
       :phone="contactSection.phone"
       :email="contactSection.email"
     />
@@ -45,6 +45,10 @@
       :subtitle="historySection.subtitle"
       :timeline-items="historySection.dataTimeline"
       :message-when-no-items="historySection.messageWhenNoItems"
+    />
+    <feature-section
+      :section-title="featureSection.sectionTitle"
+      :feature-cards="featureSection.featureCards"
     />
   </div>
 </template>
@@ -55,6 +59,7 @@ import DescSection from '~/components/DescSection'
 import ContactSection from '~/components/ContactSection.vue'
 import HistorySection from '~/components/HistorySection'
 import TeamMemberSection from '~/components/TeamMemberSection'
+import FeatureSection from '~/components/FeatureSection'
 
 export default {
   name: 'Showcase',
@@ -63,7 +68,8 @@ export default {
     DescSection,
     TeamMemberSection,
     ContactSection,
-    HistorySection
+    HistorySection,
+    FeatureSection
   },
   data() {
     // Add Sample data under your own namespaces
@@ -148,7 +154,7 @@ export default {
       contactSection: {
         mapSrc:
           'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.110768497124!2d126.88833755170758!3d37.57600927969696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c991346a0febd%3A0xa13d6751e4b0eec9!2zKOyjvCnsnbjsgqzsnbTthLA!5e0!3m2!1sko!2skr!4v1554083841549!5m2!1sko!2skr',
-        adress: '서울특별시 마포구 매봉산로 37 DMC 산학협력연구센터 601',
+        address: '서울특별시 마포구 매봉산로 37 DMC 산학협력연구센터 601',
         phone: '070-7548-9182',
         email: 'contacts@ninestairs.co.kr'
       },
@@ -182,6 +188,39 @@ export default {
           }
         ],
         messageWhenNoItems: 'No articles found.'
+      },
+      featureSection: {
+        sectionTitle: '인사이터의 소셜 빅데이터 분석 구조도',
+        featureCards: [
+          {
+            image: 'img/featureCards/feature-card-1.png',
+            title: '정형 / 비정형 데이터 수집',
+            subtitle: '주요 기능',
+            descs: [
+              '1. 데이터 수집; 2. 수집 데이터 분류(광고, 종교, 일반 등)',
+              '수집 채널; - 트위터; - 각종 카페/블로그, 대형 커뮤니티; - 인스타그램 등'
+            ],
+            splitDescBy: ';'
+          },
+          {
+            image: 'img/featureCards/feature-card-2.png',
+            title: '정형 / 비정형 데이터 정제',
+            subtitle: '주요 기능',
+            descs: [
+              '1. 자연어 처리(형태소 분석); 2. 말뭉치 사전 활용(동의어, 반의어, 이슈어 등); 3. 온톨로지 사전 활용; (약 250만개 이상); 4. 토픽 추출'
+            ],
+            splitDescBy: ';'
+          },
+          {
+            image: 'img/featureCards/feature-card-3.png',
+            title: '데이터 분석 및 인사이트 도출',
+            subtitle: '주요 기능',
+            descs: [
+              '1. 정제된 데이터 시각화 및 대시보드 제공, 2. 다양한 통계적 기법으로 유의미한 데이터 자동 추출, 3. 자동 분석 보고서 제작'
+            ],
+            splitDescBy: ','
+          }
+        ]
       }
     }
   }
