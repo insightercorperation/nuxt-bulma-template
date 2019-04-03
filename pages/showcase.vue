@@ -46,6 +46,12 @@
       :timeline-items="historySection.dataTimeline"
       :message-when-no-items="historySection.messageWhenNoItems"
     />
+    <portfolio-section
+      :title="portfolioSection.title"
+      :subtitle="portfolioSection.subtitle"
+      :items="portfolioSection.items"
+      :cardsize="portfolioSection.cardsize"
+    />
   </div>
 </template>
 
@@ -55,6 +61,7 @@ import DescSection from '~/components/DescSection'
 import ContactSection from '~/components/ContactSection.vue'
 import HistorySection from '~/components/HistorySection'
 import TeamMemberSection from '~/components/TeamMemberSection'
+import PortfolioSection from '~/components/PortfolioSection.vue'
 
 export default {
   name: 'Showcase',
@@ -63,7 +70,8 @@ export default {
     DescSection,
     TeamMemberSection,
     ContactSection,
-    HistorySection
+    HistorySection,
+    PortfolioSection
   },
   data() {
     // Add Sample data under your own namespaces
@@ -182,6 +190,53 @@ export default {
           }
         ],
         messageWhenNoItems: 'No articles found.'
+      },
+      portfolioSection: {
+        title: '포트폴리오',
+        subtitle: '인사이터의 결과물',
+        items: [
+          {
+            image: 'img/teamMembers/alex.jpg',
+            title: 'Alex',
+            subtitle: '2014-2015'
+          },
+          {
+            image: 'img/teamMembers/ari.jpg',
+            title: 'Ari',
+            subtitle: '2017-2018'
+          },
+          {
+            image: 'img/teamMembers/cindy.png',
+            title: 'Cindy',
+            subtitle: '2018-2019'
+          },
+          {
+            image: 'img/teamMembers/maven.png',
+            title: 'Maven',
+            subtitle: '2018-2019'
+          },
+          {
+            image: 'img/teamMembers/alex.jpg',
+            title: 'Alex',
+            subtitle: '2014-2015'
+          },
+          {
+            image: 'img/teamMembers/ari.jpg',
+            title: 'Ari',
+            subtitle: '2017-2018'
+          },
+          {
+            image: 'img/teamMembers/cindy.png',
+            title: 'Cindy',
+            subtitle: '2018-2019'
+          },
+          {
+            image: 'img/teamMembers/maven.png',
+            title: 'Maven',
+            subtitle: '2018-2019'
+          }
+        ],
+        cardsize: 400
       }
     }
   }
