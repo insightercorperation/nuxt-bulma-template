@@ -56,6 +56,12 @@
       :items="portfolioSection.items"
       :cardsize="portfolioSection.cardsize"
     />
+    <jumboSection
+      title="선도적인 기술과;데이터를 통한 유의미한 가치 창출"
+      image="jumbo.jpeg"
+      :full-height="false"
+      :split-subtitle-by="';'"
+    />
   </div>
 </template>
 
@@ -63,10 +69,11 @@
 import SponsorSection from '~/components/SponsorSection.vue'
 import DescSection from '~/components/DescSection'
 import ContactSection from '~/components/ContactSection.vue'
-import HistorySection from '~/components/HistorySection'
-import TeamMemberSection from '~/components/TeamMemberSection'
-import FeatureSection from '~/components/FeatureSection'
+import HistorySection from '~/components/HistorySection.vue'
+import TeamMemberSection from '~/components/TeamMemberSection.vue'
+import FeatureSection from '~/components/FeatureSection.vje'
 import PortfolioSection from '~/components/PortfolioSection.vue'
+import JumboSection from '~/components/JumboSection.vue'
 
 export default {
   name: 'Showcase',
@@ -77,7 +84,8 @@ export default {
     ContactSection,
     HistorySection,
     FeatureSection,
-    PortfolioSection
+    PortfolioSection,
+    JumboSection
   },
   data() {
     // Add Sample data under your own namespaces
