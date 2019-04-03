@@ -16,19 +16,19 @@
       :image-position="sample.image.position"
     >
       <!-- Add slot in Desc Section -->
-      <div style="padding-left: 0;">
-        <div class="column">
-          <h3>보유 기술 및 데이터</h3>
-          <h3>- Social Insighter(소셜 빅데이터 분석 시스템)</h3>
-          <h3>- I-Crawler, 소셜 빅데이터</h3>
+      <div>
+        <div>
+          <div class="subtitle">보유 기술 및 데이터</div>
+          <div class="desc">- Social Insighter(소셜 빅데이터 분석 시스템)</div>
+          <div class="desc">- I-Crawler, 소셜 빅데이터</div>
         </div>
-        <div class="column">
-          <h3>사업 실적</h3>
-          <h3>- 소셜 빅데이터 활용 마케팅 컨설팅</h3>
-          <h3>- 바이럴 마케팅</h3>
-          <h3>- SNS 활용 홍보</h3>
+        <div>
+          <div class="subtitle">사업 실적</div>
+          <div class="desc">- 소셜 빅데이터 활용 마케팅 컨설팅</div>
+          <div class="desc">- 바이럴 마케팅</div>
+          <div class="desc">- SNS 활용 홍보</div>
         </div>
-        <div class="column">
+        <div>
           <span class="button is-primary">컨설팅 신청하기</span>
         </div>
       </div>
@@ -58,9 +58,9 @@
     />
     <jumboSection
       title="선도적인 기술과;데이터를 통한 유의미한 가치 창출"
-      image="jumbo.jpeg"
-      :full-height="false"
-      :split-subtitle-by="';'"
+      image="img/jumbo.jpeg"
+      :full-height="true"
+      :split-title-by="';'"
     />
   </div>
 </template>
@@ -71,7 +71,7 @@ import DescSection from '~/components/DescSection'
 import ContactSection from '~/components/ContactSection.vue'
 import HistorySection from '~/components/HistorySection.vue'
 import TeamMemberSection from '~/components/TeamMemberSection.vue'
-import FeatureSection from '~/components/FeatureSection.vje'
+import FeatureSection from '~/components/FeatureSection.vue'
 import PortfolioSection from '~/components/PortfolioSection.vue'
 import JumboSection from '~/components/JumboSection.vue'
 

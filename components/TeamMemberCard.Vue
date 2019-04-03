@@ -1,5 +1,5 @@
 <template>
-  <div class="card ins-card">
+  <div class="ins-card">
     <div class="card-image" style="margin-bottom: 20px;">
       <figure class="image is-1by1 swap-on-hover">
         <img
@@ -14,10 +14,10 @@
         />
       </figure>
     </div>
-    <div class="media-content">
+    <div class="ins-content-container">
       <p class="title" style="font-weight: 700;">{{ name }}</p>
-      <h2 class="ins-card-job">{{ job }}</h2>
-      <h2 class="subtitle">{{ desc }}</h2>
+      <h2 class="title">{{ job }}</h2>
+      <h2 class="desc">{{ desc }}</h2>
     </div>
   </div>
 </template>

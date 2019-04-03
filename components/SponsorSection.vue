@@ -44,30 +44,31 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .ins-sponsor-container {
   display: flex;
   flex-wrap: wrap;
-}
-.ins-sponsor-element {
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 1rem;
-  min-height: 120px;
-}
-.ins-sponsor-element:hover {
-  filter: none;
-  opacity: 1;
-}
-.ins-sponsor-element img {
-  max-width: 150px;
-  filter: grayscale(100%);
-  opacity: 0.66;
-}
-.ins-sponsor-element img:hover {
-  filter: none;
-  opacity: 1;
+
+  .ins-sponsor-element {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    min-height: 120px;
+    img {
+      max-width: 150px;
+      filter: grayscale(100%);
+      opacity: 0.66;
+    }
+    img:hover {
+      filter: none;
+      opacity: 1;
+    }
+  }
+  .ins-sponsor-element:hover {
+    filter: none;
+    opacity: 1;
+  }
 }
 </style>

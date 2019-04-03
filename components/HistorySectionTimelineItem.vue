@@ -31,7 +31,7 @@ export default {
 <style lang="scss" scoped>
 @import '~assets/main.scss';
 
-$line-offset: 45px;
+$line-offset: 55px;
 $line-width: 10px;
 
 .ins-tln-item-wrapper {
@@ -43,10 +43,10 @@ $line-width: 10px;
   }
   .ins-tln-year {
     color: $primary;
-    font-size: 1.3rem;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+    font-size: 2rem;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
     border: 10px solid $primary;
     text-align: center;
     padding-top: 24px;
@@ -56,15 +56,16 @@ $line-width: 10px;
     margin-left: $line-offset;
     border-left: 10px solid $primary;
     display: flex;
+    font-size: 1.5rem;
 
     .ins-line {
       height: 10px;
       width: 50px;
-      margin-top: 10px;
+      margin-top: 17px;
       border-top: 3px solid $primary;
     }
     .ins-date {
-      width: 90px;
+      width: 120px;
       color: $dark;
       text-align: center;
     }

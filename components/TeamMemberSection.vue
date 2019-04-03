@@ -1,9 +1,13 @@
 <template>
-  <section
-    class="hero-is-medium"
-    style="padding-left: 10px; padding-right: 10px;"
-  >
-    <div class="columns is-multiline is-variable is-8">
+  <section class="hero-is-medium">
+    <header
+      :class="{ 'no-display': !Boolean(title) }"
+      class="ins-section-header"
+    >
+      <h3 class="title">{{ title }}</h3>
+      <h5 class="subtitle">{{ subtitle }}</h5>
+    </header>
+    <div class="columns is-multiline is-variable">
       <team-member-card
         v-for="member in members"
         :key="member.name"
@@ -27,6 +31,14 @@ export default {
     TeamMemberCard
   },
   props: {
+    title: {
+      type: String,
+      default: ''
+    },
+    subtitle: {
+      type: String,
+      default: ''
+    },
     members: {
       type: Array,
       required: true
@@ -36,6 +48,9 @@ export default {
 </script>
 
 <style>
+.no-display {
+  display: none;
+}
 .ins-card-element {
   margin: 0 0rem 2rem rem;
 }

@@ -2,15 +2,16 @@
   <section :class="classes">
     <div class="hero-body" :style="{ backgroundImage: `url(${url})` }">
       <div class="container">
-        <div v-if="splitSubtitleBy">
-          <h1
-            v-for="text in splittedSubtitle"
-            :key="text"
-            class="title ins-jumbo-title"
-          >
-            {{ text }}
+        <header class="ins-jumbo-header">
+          <h1 v-if="Boolean(splitTitleBy)" class="title">
+            <div v-for="(token, index) in splittedTitle" :key="index">
+              {{ token }}
+            </div>
           </h1>
-        </div>
+          <h1 v-else class="title">{{ title }}</h1>
+          <h2 class="subtitle">{{ subtitle }}</h2>
+          <h2 class="desc">{{ desc }}</h2>
+        </header>
       </div>
     </div>
   </section>
@@ -23,19 +24,25 @@ export default {
       type: String,
       required: true
     },
+    subtitle: {
+      type: String,
+      default: ''
+    },
+    desc: {
+      type: String,
+      default: ''
+    },
     image: {
       type: String,
       required: true
     },
     fullHeight: {
       type: Boolean,
-      default: function() {
-        return false
-      }
+      default: false
     },
-    splitSubtitleBy: {
+    splitTitleBy: {
       type: String,
-      required: true
+      default: ''
     }
   },
   data() {
@@ -45,9 +52,9 @@ export default {
     }
   },
   computed: {
-    splittedSubtitle() {
-      if (this.splitSubtitleBy) {
-        return this.title.split(this.splitSubtitleBy)
+    splittedTitle() {
+      if (this.splitTitleBy !== '') {
+        return this.title.split(this.splitTitleBy)
       } else {
         return ''
       }

@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <header class="ins-section-header">
+    <header class="ins-section-header ins-portfolio-header">
       <h3 class="title">{{ title }}</h3>
       <h5 class="subtitle">{{ subtitle }}</h5>
     </header>
@@ -56,3 +56,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.ins-portfolio-header {
+  margin-bottom: 5rem;
+}
+</style>

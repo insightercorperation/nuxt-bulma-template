@@ -2,9 +2,9 @@
   <section class="section">
     <div class="columns">
       <div class="column is-3">
-        <header>
+        <header class="ins-section-header has-text-left">
           <h3 class="title">{{ title }}</h3>
-          <h5 class="subtitle">
+          <h5 class="desc">
             {{ subtitle }}
           </h5>
         </header>

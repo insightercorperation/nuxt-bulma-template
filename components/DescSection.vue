@@ -3,20 +3,20 @@
     <div class="hero-body">
       <div v-if="imagePosition == 'right'" class="columns is-vcentered">
         <div class="column is-5">
-          <h1 class="ins-desc-title">{{ title }}</h1>
-          <div v-if="splitSubtitleBy">
-            <h2
-              v-for="text in splittedSubtitle"
-              :key="text"
-              class="ins-desc-subtitle"
-            >
-              {{ text }}
-            </h2>
+          <header class="ins-section-header has-text-left">
+            <h3 class="title">{{ title }}</h3>
+            <div v-if="splitSubtitleBy">
+              <h5 v-for="text in splittedSubtitle" :key="text" class="subtitle">
+                {{ text }}
+              </h5>
+            </div>
+            <div v-else>
+              <h2 class="subtitle">{{ subtitle }}</h2>
+            </div>
+          </header>
+          <div class="ins-content-container">
+            <slot />
           </div>
-          <div v-else>
-            <h2 class="ins-desc-subtitle">{{ subtitle }}</h2>
-          </div>
-          <slot />
         </div>
         <div class="column is-6">
           <img :src="resolvedImageUrl" :alt="imageDesc" />
@@ -24,19 +24,17 @@
       </div>
       <div v-else class="columns is-vcentered">
         <div class="column is-5 is-offset-1 top">
-          <h1 class="ins-desc-title">{{ title }}</h1>
-          <div v-if="splitSubtitleBy">
-            <h2
-              v-for="text in splittedSubtitle"
-              :key="text"
-              class="ins-desc-subtitle"
-            >
-              {{ text }}
-            </h2>
-          </div>
-          <div v-else>
-            <h2 class="ins-desc-subtitle">{{ subtitle }}</h2>
-          </div>
+          <header class="ins-section-header has-text-left">
+            <h3 class="title">{{ title }}</h3>
+            <div v-if="splitSubtitleBy">
+              <h5 v-for="text in splittedSubtitle" :key="text" class="subtitle">
+                {{ text }}
+              </h5>
+            </div>
+            <div v-else>
+              <h5 class="subtitle">{{ subtitle }}</h5>
+            </div>
+          </header>
           <slot />
         </div>
         <div class="column is-6 bottom">
@@ -93,14 +91,6 @@ export default {
 </script>
 
 <style scoped>
-.ins-desc-title {
-  font-size: 2rem;
-  font-weight: 900;
-}
-.ins-desc-subtitle {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
 .top {
   order: 1;
 }

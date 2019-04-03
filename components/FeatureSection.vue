@@ -1,9 +1,10 @@
 <template>
-  <section class="hero is-medium background-color">
-    <header class="header ins-feature-header">
-      <h1 class="title">{{ sectionTitle }}</h1>
+  <section class="hero is-medium">
+    <div class="half-block background-color" />
+    <header class="ins-section-header">
+      <h1 class="subtitle ins-feature-subtitle">{{ sectionTitle }}</h1>
     </header>
-    <div class="hero-body columns ins-body">
+    <div class="hero-body columns">
       <feature-card
         v-for="card in featureCards"
         :key="card.title"
@@ -39,18 +40,22 @@ export default {
 </script>
 
 <style scoped>
-.ins-feature-header {
-  text-align: center;
-  margin: 4rem 0 4rem 0;
+section {
+  position: relative;
 }
-.ins-body {
-  /* padding: 0; */
-  padding: 0 5rem 0 5rem;
+.ins-feature-subtitle {
+  margin-top: 4rem;
+  margin-bottom: -5rem;
+}
+.half-block {
+  width: 100px;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .background-color {
   width: 100%;
-  height: 40rem;
-  /* height: 45rem; */
   background-color: #ecf3fc;
   background-repeat: no-repeat;
   z-index: -1;

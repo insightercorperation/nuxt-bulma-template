@@ -3,14 +3,12 @@
     <div class="ins-image">
       <img :src="resolvedImageUrl" :alt="imageName" />
     </div>
-    <div class="media-content">
-      <h1 class="title ins-title">{{ title }}</h1>
-      <h2 class="subtitle has-text-primary">{{ subtitle }}</h2>
-      <div v-for="desc in descs" :key="desc">
-        <div class="ins-descs">
-          <h2 v-for="text in splittedDesc(desc)" :key="text" class="ins-desc">
-            {{ text }}
-          </h2>
+    <div class="ins-content-container">
+      <h1 class="title ins-card-title">{{ title }}</h1>
+      <h2 class="subtitle">{{ subtitle }}</h2>
+      <div v-for="desc in descs" :key="desc" class="desc">
+        <div v-for="text in splittedDesc(desc)" :key="text">
+          {{ text }}
         </div>
       </div>
     </div>
@@ -56,6 +54,9 @@ export default {
 </script>
 
 <style scoped>
+.ins-card-title {
+  margin-bottom: 3rem;
+}
 .ins-image {
   display: block;
   margin-left: auto;
@@ -78,7 +79,7 @@ export default {
   box-shadow: -3px -3px 30px 4px rgba(12, 10, 10, 0.2),
     0 0 0 0px rgba(10, 10, 10, 0.5);
   border-radius: 8px;
-  margin: 0 2.5rem 2.5rem 2.5rem;
-  padding: 2.5rem 2.5rem 0 2.5rem;
+  margin: 0 1.5rem 1.5rem 1.5rem;
+  padding: 3.5rem;
 }
 </style>

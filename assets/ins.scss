@@ -1,5 +1,63 @@
 
+$ins-black: #1D252D;
+
+.ins-jumbo-header {
+    
+    .title {
+        color: white;
+        font-size: 3.5rem;
+        font-weight: 800;
+    }
+
+    .subtitle {
+        color: white;
+        
+    }
+
+    .desc {
+        color: white;
+        font-size: 1.5rem;
+    }
+}
 .ins-section-header {
     text-align: center;
     margin-bottom: 1.5rem;
+
+    .title {
+        color: $ins-black;
+        font-size: 3rem;
+        
+    }
+
+    .subtitle {
+        color: $ins-black;
+        font-size: 2rem;
+        margin-bottom: 0;
+    }
+
+    .desc {
+        color: $ins-black;
+        font-size: 1.5rem;
+    }
 }
+
+.ins-content-container {
+
+    font-size: 1.5rem;
+
+    .title {
+        color: $ins-black;
+        font-size: bold;
+    }
+    
+    .subtitle {
+        color: #69ACDF;
+        font-weight: 800;
+        margin: 1.5rem 0 0 0;
+    }
+
+    .desc {
+        color: $ins-black;
+    }
+}
+

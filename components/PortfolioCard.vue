@@ -7,7 +7,10 @@
         class="ins-img swap-on-hover__front-image"
       />
       <div class="ins-img-desc swap-on-hover__back-image">
-        <div>{{ title }}<br />{{ subtitle }}</div>
+        <div class="ins-content-container">
+          <span class="subtitle has-text-white">{{ title }}</span
+          ><br /><span class="desc has-text-white">{{ subtitle }}</span>
+        </div>
       </div>
     </figure>
   </div>

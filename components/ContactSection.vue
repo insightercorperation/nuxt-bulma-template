@@ -1,7 +1,7 @@
 <template>
   <section class="hero is-large">
     <div class="hero-body">
-      <div class="columns is-vcentered">
+      <div class="columns">
         <div class="column is-6">
           <iframe
             :src="mapSrc"
@@ -11,20 +11,24 @@
             allowfullscreen
           />
         </div>
-        <div class="column ins-text-column is-offset-1">
-          <p class="ins-header ins-text-spacing">Contact Us</p>
-          <div class="ins-text-spacing">
-            <h1 class="ins-title">Address</h1>
-            <h2 class="ins-subtitle">{{ address }}</h2>
-          </div>
-          <div class="ins-text-spacing">
-            <h1 class="ins-title">Phone</h1>
-            <h2 class="ins-subtitle">{{ phone }}</h2>
-          </div>
-          <div class="ins-text-spacing">
-            <h1 class="ins-title">Email</h1>
-            <h2 class="ins-subtitle">{{ email }}</h2>
-          </div>
+        <div class="column is-offset-1">
+          <article>
+            <header class="ins-section-header has-text-left">
+              <h3 class="title">Contact Us</h3>
+            </header>
+            <div class="ins-content-container">
+              <div class="title ins-contact-title">Address</div>
+              <div class="desc">{{ address }}</div>
+            </div>
+            <div class="ins-content-container">
+              <div class="title ins-contact-title">Phone</div>
+              <div class="desc">{{ phone }}</div>
+            </div>
+            <div class="ins-content-container">
+              <div class="title ins-contact-title">Email</div>
+              <div class="desc">{{ email }}</div>
+            </div>
+          </article>
         </div>
       </div>
     </div>
@@ -55,6 +59,9 @@ export default {
 </script>
 
 <style scoped>
+.ins-contact-title {
+  margin-top: 3rem;
+}
 .ins-header {
   font-size: 3rem;
   font-weight: 600;
