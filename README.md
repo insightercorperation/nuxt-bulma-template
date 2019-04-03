@@ -12,15 +12,16 @@ It is not just about nuxt and bulma. You can start with **adaptive layout**, som
 
 * loginForm (TODO) : Social Login?
 * SignupForm (TODO)
-* DescSection (TODO) : title-and-image-left, title-subtitle-and-image-right
+* DescSection : title-and-image-left, title-subtitle-and-image-right
 * DiagonalSectionDivider (TODO) : left-top-to-right-bottom, right-top-to-left-bottom
-* SponsorSection (TODO)
-* TeamMemberSection (TODO)
-* HistorySection (TODO)
-* PortfolioSection (TODO)
-* JumboSection (TODO)
-* ContactSection (TODO)
+* SponsorSection
+* TeamMemberSection
+* HistorySection
+* PortfolioSection
+* JumboSection (DOING)
+* ContactSection
 * ReveiwSection (TODO)
+* FeatureSection (TODO)
 
 
 ## Embedded plugins

@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <header class="header ins-sponsor-header">
+    <header class="ins-section-header">
       <h3 class="title">{{ title }}</h3>
     </header>
     <div class="ins-sponsor-container">
@@ -45,10 +45,6 @@ export default {
 </script>
 
 <style scoped>
-.ins-sponsor-header {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
 .ins-sponsor-container {
   display: flex;
   flex-wrap: wrap;
